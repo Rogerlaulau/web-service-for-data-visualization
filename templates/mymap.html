@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_087c9d77688249559f08a5e098c83436 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_087c9d77688249559f08a5e098c83436" ></div>
+        
+</body>
+<script>    
+    
+            var map_087c9d77688249559f08a5e098c83436 = L.map(
+                "map_087c9d77688249559f08a5e098c83436",
+                {
+                    center: [22.295403586726987, 114.17205382336623],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f24bf3053e64a19832d475de6b4ce09 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var marker_15505fd6f9714bce8844da27e8ca947b = L.marker(
+                [22.30906146247149, 114.1743018372152],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_7ac8561b8c134882b54852bec47b676b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_15505fd6f9714bce8844da27e8ca947b.setIcon(icon_7ac8561b8c134882b54852bec47b676b);
+        
+    
+        var popup_c403fad1301c4946bf80ec22a1b319dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_455f9dd338334c65be8b1f28f89c49f9 = $(`<div id="html_455f9dd338334c65be8b1f28f89c49f9" style="width: 100.0%; height: 100.0%;">Queen Elizabeth Hospital</div>`)[0];
+            popup_c403fad1301c4946bf80ec22a1b319dd.setContent(html_455f9dd338334c65be8b1f28f89c49f9);
+        
+
+        marker_15505fd6f9714bce8844da27e8ca947b.bindPopup(popup_c403fad1301c4946bf80ec22a1b319dd)
+        ;
+
+        
+    
+    
+            var marker_6653726158f54317965eacdfb985bd06 = L.marker(
+                [22.315581387758485, 114.17246985150629],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_770f7ebade9946fb96587d34ecdd038a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_6653726158f54317965eacdfb985bd06.setIcon(icon_770f7ebade9946fb96587d34ecdd038a);
+        
+    
+        var popup_a4dcf7503f9b44d5b4239232fcb78f3b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10101a79476d4467895f745fb636f52f = $(`<div id="html_10101a79476d4467895f745fb636f52f" style="width: 100.0%; height: 100.0%;">Kwong Wah Hospital</div>`)[0];
+            popup_a4dcf7503f9b44d5b4239232fcb78f3b.setContent(html_10101a79476d4467895f745fb636f52f);
+        
+
+        marker_6653726158f54317965eacdfb985bd06.bindPopup(popup_a4dcf7503f9b44d5b4239232fcb78f3b)
+        ;
+
+        
+    
+    
+            var marker_07593fa741d940f68cc77752f0ac350b = L.marker(
+                [22.32521539754405, 114.18149392501816],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_70445f3e998a490c85550f92d20ace45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_07593fa741d940f68cc77752f0ac350b.setIcon(icon_70445f3e998a490c85550f92d20ace45);
+        
+    
+        var popup_3176b194f2ca450b962c3eca6de90bb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b6f3ab53b6d41628a082d8276d35646 = $(`<div id="html_1b6f3ab53b6d41628a082d8276d35646" style="width: 100.0%; height: 100.0%;">Kowloon Hospital</div>`)[0];
+            popup_3176b194f2ca450b962c3eca6de90bb4.setContent(html_1b6f3ab53b6d41628a082d8276d35646);
+        
+
+        marker_07593fa741d940f68cc77752f0ac350b.bindPopup(popup_3176b194f2ca450b962c3eca6de90bb4)
+        ;
+
+        
+    
+    
+            var marker_8ce2106d5ab14225ad7868d266856465 = L.marker(
+                [22.32672219522255, 114.18497902231285],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_a5140d42ad6745f19ec12f5a681c82f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_8ce2106d5ab14225ad7868d266856465.setIcon(icon_a5140d42ad6745f19ec12f5a681c82f9);
+        
+    
+        var popup_0afa544e803d43ec9984708c4013a727 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e3c5f83fd66492497c126b03ad22016 = $(`<div id="html_6e3c5f83fd66492497c126b03ad22016" style="width: 100.0%; height: 100.0%;">Sanit Teresa's Hospital</div>`)[0];
+            popup_0afa544e803d43ec9984708c4013a727.setContent(html_6e3c5f83fd66492497c126b03ad22016);
+        
+
+        marker_8ce2106d5ab14225ad7868d266856465.bindPopup(popup_0afa544e803d43ec9984708c4013a727)
+        ;
+
+        
+    
+    
+            var marker_e074719d41fb4a5ab99344e4406e2dbe = L.marker(
+                [22.32422851934736, 114.22696000524307],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_84ad095ef8dd498e9e5f6e07ad98e901 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_e074719d41fb4a5ab99344e4406e2dbe.setIcon(icon_84ad095ef8dd498e9e5f6e07ad98e901);
+        
+    
+        var popup_b06083a638424304ae2acf94af7fde87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25fad43605ee4708a0ffcd84f7a1bf13 = $(`<div id="html_25fad43605ee4708a0ffcd84f7a1bf13" style="width: 100.0%; height: 100.0%;">United Christian Hospital</div>`)[0];
+            popup_b06083a638424304ae2acf94af7fde87.setContent(html_25fad43605ee4708a0ffcd84f7a1bf13);
+        
+
+        marker_e074719d41fb4a5ab99344e4406e2dbe.bindPopup(popup_b06083a638424304ae2acf94af7fde87)
+        ;
+
+        
+    
+    
+            var marker_e6220bc67bee46f7acf3097352b04bbd = L.marker(
+                [22.335307576219005, 114.16210465960177],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_d6190868f4dd40fbb0aaa14387841c4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_e6220bc67bee46f7acf3097352b04bbd.setIcon(icon_d6190868f4dd40fbb0aaa14387841c4c);
+        
+    
+        var popup_b1eb6baeb52a472bb106446c03d6f4bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_009b26b9481c42a3beb3e8deea4807e2 = $(`<div id="html_009b26b9481c42a3beb3e8deea4807e2" style="width: 100.0%; height: 100.0%;">Precious Blood Hospital</div>`)[0];
+            popup_b1eb6baeb52a472bb106446c03d6f4bd.setContent(html_009b26b9481c42a3beb3e8deea4807e2);
+        
+
+        marker_e6220bc67bee46f7acf3097352b04bbd.bindPopup(popup_b1eb6baeb52a472bb106446c03d6f4bd)
+        ;
+
+        
+    
+    
+            var marker_fd13d5b6e13e401aa4e6642dbe3889fb = L.marker(
+                [22.36197491911313, 114.17541493524212],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_c2186a71b40a4be5aedc08b9f1c388bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_fd13d5b6e13e401aa4e6642dbe3889fb.setIcon(icon_c2186a71b40a4be5aedc08b9f1c388bd);
+        
+    
+        var popup_004db48c75e74c75a5df7bdc5dbb1aaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c232d2948944097a816c98ab997c7d9 = $(`<div id="html_5c232d2948944097a816c98ab997c7d9" style="width: 100.0%; height: 100.0%;">Union Hospital</div>`)[0];
+            popup_004db48c75e74c75a5df7bdc5dbb1aaf.setContent(html_5c232d2948944097a816c98ab997c7d9);
+        
+
+        marker_fd13d5b6e13e401aa4e6642dbe3889fb.bindPopup(popup_004db48c75e74c75a5df7bdc5dbb1aaf)
+        ;
+
+        
+    
+    
+            var marker_ba0b8a80caa9467f9b6c31a70ace3348 = L.marker(
+                [22.279008527996144, 114.17556366433945],
+                {}
+            ).addTo(map_087c9d77688249559f08a5e098c83436);
+        
+    
+            var icon_467cee20dc3b40cb88cba738c35d6f4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "fa fa-circle-o"}
+            );
+            marker_ba0b8a80caa9467f9b6c31a70ace3348.setIcon(icon_467cee20dc3b40cb88cba738c35d6f4e);
+        
+    
+        var popup_f6ced5d140c24247b12e60857304b82d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef71c44e75eb48b18313861616748b64 = $(`<div id="html_ef71c44e75eb48b18313861616748b64" style="width: 100.0%; height: 100.0%;">Ruttonjee Hospital</div>`)[0];
+            popup_f6ced5d140c24247b12e60857304b82d.setContent(html_ef71c44e75eb48b18313861616748b64);
+        
+
+        marker_ba0b8a80caa9467f9b6c31a70ace3348.bindPopup(popup_f6ced5d140c24247b12e60857304b82d)
+        ;
+
+        
+    
+</script>
