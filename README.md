@@ -22,7 +22,7 @@ pip3 install flask
 
 Before to get the hands dirty, some coordinates related to hospitals in Hong Kong are collected and saved in a csv file as shown below. We need latitude and longitude to generate a map.
 
-![Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled.png](Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled.png)
+![my csv file](/image/Untitled.png)
 
 Let’s start by writing main.py:
 
