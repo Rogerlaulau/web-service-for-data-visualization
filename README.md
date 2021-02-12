@@ -20,7 +20,7 @@ pip3 install flask
 
 ## Generate a map
 
-Before to get the hands dirty, some coordinates related to hospitals in Hong Kong are collected and saved in a csv file as shown below. We need latitude and longitude to generate a map.
+Before to get the hands dirty, some coordinates related to hospitals in Hong Kong are collected and saved in a csv file as shown below. We need latitudes and longitudes to generate a map.
 
 ![coordinates](/image/coordinates.png)
 
@@ -115,7 +115,7 @@ I specify the service to be run at port 4000. Now go to browser search bar and t
 
 ![mymap2](/image/mymap2.png)
 
-Yead!! You are successful to create a simple web app that visualise a list of coordinates in a map.
+Yeah!! You are successful to create a simple web app that visualise a list of coordinates in a map.
 
 If you want to stop your service, just press Control + C to quit.
 
