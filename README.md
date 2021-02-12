@@ -22,7 +22,7 @@ pip3 install flask
 
 Before to get the hands dirty, some coordinates related to hospitals in Hong Kong are collected and saved in a csv file as shown below. We need latitude and longitude to generate a map.
 
-![my csv file](/image/Untitled.png)
+![coordinates](/image/coordinates.png)
 
 Let’s start by writing main.py:
 
@@ -52,11 +52,11 @@ First of all, importing pandas to load the data from the file coordinates.csv. A
 
 Okay. Let's try to run the script. Open a terminal , navigate to the current working directory and run it.
 
-![Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%201.png](Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%201.png)
+![run script](/image/run_script.png)
 
 Now you should see a file name "mymap.html" is generated in your current directory. If you open it with your browser, you are expected to see the same effect as the following picture.
 
-![Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%202.png](Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%202.png)
+![mymap1](/image/mymap1.png)
 
 Great. We have already gone through the process of generating a map. 
 
@@ -109,11 +109,11 @@ if __name__=="__main__":
 
 It is time to test it out again. 
 
-![Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%203.png](Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%203.png)
+![start_service](/image/start_service.png)
 
 I specify the service to be run at port 4000. Now go to browser search bar and type "localhost:4000/", you should see "Status: OK" is shown, this indicates the service is running successfully. After that, try "localhost:4000/map"Yeah!! You are successful to create a simple web app that visualise coordinates in a map.
 
-![Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%204.png](Build%20a%20web%20service%20that%20visualise%20data%20in%20a%20map%204480bf53ec31415c957e30e2763370d1/Untitled%204.png)
+![mymap2](/image/mymap2.png)
 
 Yead!! You are successful to create a simple web app that visualise a list of coordinates in a map.
 
@@ -123,4 +123,46 @@ Additionally, if you don't want to save the html file, you can transform the map
 
 ```python
 return(my_map.get_root().render())
-```# web-service-for-data-visualization
+```
+
+Full code:
+```python
+import folium
+import pandas as pd
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET"])
+def status():
+    print("/")
+    return "Status: OK"
+
+@app.route("/map", methods=["GET"])
+def map():
+    print("/map")
+    return render_template("mymap.html")
+    # return(my_map.get_root().render())
+
+def generate_map():
+    df = pd.read_csv("coordinates.csv")
+
+    my_map = folium.Map(
+        # center: Hong Kong Space Museum
+        location=[22.295403586726987, 114.17205382336623],
+        tiles='cartodbpositron',
+        zoom_start=13
+    )
+    df.apply(lambda row:folium.Marker(location=[row["Latitude"], row["Longitude"]], popup=row["Location"], icon=folium.Icon(color='red', prefix='fa fa-circle-o')).add_to(my_map), axis=1)
+    my_map.save("templates/mymap.html")
+
+
+if __name__=="__main__":
+    generate_map()
+    print("Map is generated")
+
+    app.run(host="0.0.0.0", port=4000, debug=True)
+```
+
+
+# web-service-for-data-visualization
